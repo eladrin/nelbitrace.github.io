@@ -11,6 +11,8 @@
     <button id="authorize-button" style="display: none;">Authorize</button>
     <button id="signout-button" style="display: none;">Sign Out</button>
 
+    <button id="test-button" style="display: none;">테스트</button>
+
     <pre id="content"></pre>
 
     <script type="text/javascript">
@@ -22,10 +24,12 @@
 
       // Authorization scopes required by the API; multiple scopes can be
       // included, separated by spaces.
-      var SCOPES = "https://www.googleapis.com/auth/spreadsheets.readonly";
+      //var SCOPES = "https://www.googleapis.com/auth/spreadsheets.readonly";
+  	    var SCOPES = "https://www.googleapis.com/auth/spreadsheets";
 
       var authorizeButton = document.getElementById('authorize-button');
       var signoutButton = document.getElementById('signout-button');
+      var testButton = document.getElementById('test-button');
 
       /**
        *  On load, called to load the auth2 library and API client library.
@@ -51,6 +55,7 @@
           updateSigninStatus(gapi.auth2.getAuthInstance().isSignedIn.get());
           authorizeButton.onclick = handleAuthClick;
           signoutButton.onclick = handleSignoutClick;
+		  testButton.onclick = handleTestClick;
         });
       }
 
@@ -62,10 +67,12 @@
         if (isSignedIn) {
           authorizeButton.style.display = 'none';
           signoutButton.style.display = 'block';
+          testButton.style.display = 'block';
           listMajors();
         } else {
           authorizeButton.style.display = 'block';
           signoutButton.style.display = 'none';
+          testButton.style.display = 'none';
         }
       }
 
@@ -81,6 +88,10 @@
        */
       function handleSignoutClick(event) {
         gapi.auth2.getAuthInstance().signOut();
+      }
+      
+      function handleTestClick(event) {
+	      
       }
 
       /**
