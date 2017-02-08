@@ -40,7 +40,7 @@ function initMain() {
 	loadMamulListFromSheet();
 	setInterval(loadMamulListFromSheet, 30000);
 	
-	$("#nav-icon").click(onClickNavi);
+	$("#naviButton").click(onClickNavi);
 }
 
 var screen = 0;
