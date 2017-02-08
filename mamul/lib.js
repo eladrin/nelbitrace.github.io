@@ -120,6 +120,7 @@ function timeToString(diff) {
 		diff /= 60;
 		text = "분";
 	} 
+/*
 	if (diff > 60) {
 		diff /= 60;
 		text = "시간";
@@ -128,5 +129,6 @@ function timeToString(diff) {
 		diff /= 24;
 		text = "일";
 	}
+*/
 	return Math.floor(diff) + text;
 }
