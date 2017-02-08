@@ -43,10 +43,15 @@ function initMain() {
 	$("#nav-icon").click(onClickNavi);
 }
 
+var screen = 0;
 function onClickNavi() {
-	
+	screen++;
+	screen %= 2;
+	if (screen == 0) {
+		$("#special").hide();
+		$("#contents").show();
+	} else if (screen == 1) {
+		$("#special").show();
+		$("#contents").hide();
+	}
 }
-
-$(function() {
-	$("#loginGoogle").click(onClickNavi);
-});
