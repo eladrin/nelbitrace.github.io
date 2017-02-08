@@ -11,7 +11,7 @@ function renderList() {
 }
 
 function render(list, $table) {
-	$table.empty();
+	$table.find("tbody").empty();
 	
 	var now = new Date();
 	
