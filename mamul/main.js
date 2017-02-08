@@ -26,6 +26,7 @@ function renderList() {
 		} else {
 			//초 젠과 풀젠 사이
 			time = "풀젠까지 " + timeToString(mamul.e.getTime() - now.getTime()) + " 남음";
+			$row.find(".time").addClass("mid");
 		}
 		
 		$row.find(".time").html(time);
