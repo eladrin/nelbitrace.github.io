@@ -12,6 +12,7 @@ function onOverlayDataUpdate(e) {
 	
 	console.log(zone + " -> " + name + " : " + dead);	
 	
+	$("#headerTitle").text(zone + ", " + name);
 }
 
 function importMamul(rows) {
