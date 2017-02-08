@@ -115,21 +115,14 @@ function convertEngToKorZone(eng) {
 function timeToString(diff) {
 	diff /= 1000;
 	
-	var text = "초";
-	if (diff > 60) {
-		diff /= 60;
-		text = "분";
-	} 
+	if (diff < 60) return Math.floor(diff) + "초";
+	
+	diff /= 60;
+	if (diff < 60) return Math.floor(diff) + "분";
 
-	if (diff > 60) {
-		diff /= 60;
-		text = "시간";
-	}
-/*
-	if (diff > 24) {
-		diff /= 24;
-		text = "일";
-	}
-*/
-	return Math.floor(diff) + text;
+	diff /= 60;
+	if (diff < 24) return Math.floor(diff) + "시간";
+	
+	diff /= 24;
+	return Math.floor(diff) + "일";
 }
