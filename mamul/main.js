@@ -51,5 +51,23 @@ function updateSigninStatus(isSignedIn) {
 }
 
 function loadMamulList() {
-	
+	gapi.client.sheets.spreadsheets.values.get({
+		spreadsheetId: '11CmB5V6pWfNsoI2ZAawxIj9JODSTpe9nrIVexqVgKXs',
+		range: '시간표!A2:C',
+	}).then(function(response) {
+		var range = response.result;
+		$("#contents table tbody").empty();
+		if (range.values.length > 0) {
+			for (i = 0; i < range.values.length; i++) {
+				var row = range.values[i];
+				//appendPre(row[0] + ', ' + row[1] + ", " + row[2]);
+				$("#contents table tbody").append("<tr><td>" + row[0] + "</td><td>test</td></tr>");
+			}
+		} else {
+			//appendPre('No data found.');
+		}
+	}, function(response) {
+		//appendPre('Error: ' + response.result.error.message);
+		$("#contents table tbody").empty();
+	});
 }
