@@ -27,7 +27,7 @@ function renderList() {
 			time = "풀젠까지 " + timeToString(mamul.e.getTime() - now.getTime()) + " 남음";
 		}
 		
-		$row.find(".time").text(time);
+		$row.find(".time").text(time + "\n" + mamul.s + "\n" + mamul.e);
 		
 		$table.append($row);
 	}
