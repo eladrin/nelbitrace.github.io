@@ -100,7 +100,15 @@ body {
     left: 50%
 }
 
-#contents {
+#login {
+	text-align: center;
+}
+#login button {
+	display: table;
+	margin: 50px auto
+}
+
+.contents {
     width: 100%;
     position: relative;
     top: 3.3rem;
@@ -111,7 +119,7 @@ body {
     background: rgba(0,0,0,0.7);
 }
 
-#contents table {
+.contents table {
 	width: 100%;
 	color: white;
 }

@@ -21,7 +21,7 @@ function renderList() {
 			time = timeToString(mamul.s.getTime() - now.getTime()) + " 남음";
 		} else if (mamul.e.getTime() < now.getTime()) {
 			//풀 젠
-			time = timeToString(now.getTime() - mamul.e.getTime()) + " 초과";
+			time = timeToString(now.getTime() - mamul.e.getTime()) + " 경과";
 			$row.find(".time").addClass("full");
 		} else {
 			//초 젠과 풀젠 사이
@@ -39,4 +39,14 @@ function renderList() {
 function initMain() {
 	loadMamulListFromSheet();
 	setInterval(loadMamulListFromSheet, 30000);
+	
+	$("#nav-icon").click(onClickNavi);
 }
+
+function onClickNavi() {
+	
+}
+
+$(function() {
+	$("#loginGoogle").click(onClickNavi);
+});

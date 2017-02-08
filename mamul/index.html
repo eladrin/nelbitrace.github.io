@@ -18,7 +18,33 @@
 				마물 시간표 (카벙클)
 			</span>
 		</div>
-		<div id="contents">
+		
+		<div class="contents" id="login">
+			<button id="loginGoogle" type="button" style="border: 0; background: transparent">
+				<img src="sign-in-button.png" width="200" height="50" alt="submit" />
+			</button>
+		</div>
+		<div class="contents" id="contents" style="display: none">
+			<table>
+				<thead>
+					<tr align="center">
+						<td>지역</td>
+						<td>마물</td>
+						<td>시간</td>
+					</tr>
+				</thead>
+				<tbody>
+				</tbody>
+				<tfoot style="display: none">
+					<tr class="rowTemplate">
+						<td class="zone" align="center"></td>
+						<td class="name"></td>
+						<td class="time"></td>
+					</tr>
+				</tfoot>
+			</table>
+		</div>
+		<div class="contents" id="special" style="display: none">
 			<table>
 				<thead>
 					<tr align="center">

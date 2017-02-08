@@ -14,7 +14,7 @@ function onOverlayDataUpdate(e) {
 	//if (dead == false) return;
 		
 	
-	$("#headerTitle").text(convertEngToKorZone(zone) + ", " + name);
+	//$("#headerTitle").text(convertEngToKorZone(zone) + ", " + name);
 	
 	if (name === "Encounter") return;
 	

@@ -22,10 +22,23 @@ function updateSigninStatus(isSignedIn) {
 	if (isSignedIn) {
 		//logged in
 		initMain();
+		
+		$("#login").hide();
+		$("#special").hide();
+		$("#contents").show();
 	} else {
 		//set screen login
-		gapi.auth2.getAuthInstance().signIn();
+		//gapi.auth2.getAuthInstance().signIn();
+		
+		$("#login").show();
+		$("#special").hide();
+		$("#contents").hide();
+		
 	}
+}
+
+function doLoginGoogle() {
+	gapi.auth2.getAuthInstance().signIn();
 }
 
 //https://docs.google.com/spreadsheets/d/10wH2_hjnP-08xuVTPFp6h7IF5Fo9H2e3IQnm7ghOsBM/edit?pref=2&pli=1#gid=234086343
