@@ -21,7 +21,7 @@ function initClient() {
 function updateSigninStatus(isSignedIn) {
 	if (isSignedIn) {
 		//logged in
-		loadMamulListFromSheet();
+		initMain();
 	} else {
 		//set screen login
 		gapi.auth2.getAuthInstance().signIn();

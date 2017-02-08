@@ -111,3 +111,20 @@ var engZone = {
 function convertEngToKorZone(eng) {
 	return engZone[eng] == null ? eng : engZone[eng];
 }
+
+function timeToString(diff) {
+	var text = "초";
+	if (diff > 60) {
+		diff /= 60;
+		text = "분";
+	} 
+	if (diff > 60) {
+		diff /= 60;
+		text = "시간";
+	}
+	if (diff > 24) {
+		diff /= 24;
+		text = "일";
+	}
+	return diff + text;
+}
