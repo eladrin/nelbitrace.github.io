@@ -24,21 +24,9 @@
 		</div>
 	</div>
 </body>
-<script>
-document.addEventListener("onOverlayDataUpdate", onOverlayDataUpdate);
-window.addEventListener("message", function(e) {
-	if (e.data.type === 'onOverlayDataUpdate') onOverlayDataUpdate(e.data);
-});
-
-function onOverlayDataUpdate(e) {
-	var dead = (e.detail.Encounter.kills > 0);
-
-	var name = e.detail.Encounter.title;
-	var zone = e.detail.Encounter.CurrentZoneName;
-	if (dead == false) return;
-	
-	console.log(zone + " -> " + name + " : " + dead);	
-	
-}
+<script src="main.js" type="text/javascript"></script>
+<script async defer src="https://apis.google.com/js/api.js"
+	onload="this.onload=function(){};handleClientLoad()"
+		onreadystatechange="if (this.readyState === 'complete') this.onload()">
 </script>
 </html>
