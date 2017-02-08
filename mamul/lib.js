@@ -93,8 +93,8 @@ var engZone = {
 	"Western Thanalan": "서부다날",
 	"Central Thanalan": "중부다날",
 	"Eastern Thanalan": "동부다날",
-	"Southern Thanaalan": "남부다날",
-	"Northern Thanaalan": "북부다날",
+	"Southern Thanalan": "남부다날",
+	"Northern Thanalan": "북부다날",
 	
 	"Coerthas Central Highlands": "커르중앙",
 	
