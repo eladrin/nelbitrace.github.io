@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400');
+@import url('http://fonts.googleapis.com/earlyaccess/nanumgothic.css');
+
+* {	margin: 0; padding: 0; }
+html {
+	background-color: rgba(0, 0, 0, .01);
+	display: block;
+	font-size: 125%;
+}
+
+body, html {
+	margin: 0;
+	box-sizing: border-box;
+}
+
+body {
+	height: 100%;
+	-webkit-user-select: none;
+	-webkit-font-smoothing: antialiased;	
+}
+
+::-webkit-scrollbar { width: 0; height: 0; }
+
+#warp {
+	position: static;
+	width: 100%;
+	margin: 0 auto;
+}
+
+#header {
+	position: fixed;
+	z-index: 10001;
+	width: 100%;
+	cursor: pointer;
+}
+
+
+.mainList {
+    position: absolute;
+    width: 1.9rem;
+    height: 3.3rem;
+    padding: 0rem .7rem;
+    background: #1a1a1a
+}
+
+.mobList {
+    position: absolute;
+    width: -webkit-calc(100% - 8rem);
+    left: 3.3rem;
+    height: 1.3rem;
+    padding: 1rem .7rem;
+    font-family: 'Nanum gothic', serif;
+    font-size: 1.3rem;
+    color: #fff;
+    white-space: nowrap;
+    text-overflow: clip;
+    background: #1a1a1a;
+    overflow: hidden;
+    text-shadow: 0 0 .3rem #0f0f0f;
+    vertical-align: middle
+}
+
+.toggleBtn {
+    position: absolute;
+    width: 1.9rem;
+    height: 3.3rem;
+    padding: 0rem .7rem;
+    right: 0;
+    background: #1a1a1a
+}
+
+
+#nav-icon {
+    width: 1.9rem;
+    position: absolute;
+    top: .9rem;
+    transform: rotate(0deg);
+    transition: .5s ease-in-out
+}
+
+#nav-icon span {
+    display: block;
+    position: absolute;
+    height: 1px;
+    width: 1.9rem;
+    background: #fff;
+    border-radius: .1rem;
+    opacity: 1;
+    left: 0;
+    transform: rotate(0deg);
+    transition: .25s ease-in-out
+}
+
+#nav-icon.open span:nth-child(1) {
+    top: 0;
+    width: 0%;
+    left: 50%
+}
+
+#nav-icon.open span:nth-child(2) {
+    transform: rotate(45deg)
+}
+
+#nav-icon.open span:nth-child(3) {
+    transform: rotate(-45deg)
+}
+
+#nav-icon.open span:nth-child(4) {
+    top: 14px;
+    width: 0%;
+    left: 50%
+}
+
+.toggle {
+    display: inline-block;
+    position: absolute;
+    z-index: 1
+}
+
+.toggle__input {
+    display: block;
+    opacity: 0;
+    width: 0;
+    position: absolute;
+    z-index: 0
+}
