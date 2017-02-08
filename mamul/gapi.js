@@ -33,6 +33,7 @@ function loadMamulListFromSheet() {
 	gapi.client.sheets.spreadsheets.values.get({
 		spreadsheetId: '10wH2_hjnP-08xuVTPFp6h7IF5Fo9H2e3IQnm7ghOsBM',
 		range: 'Test',
+		dateTimeRenderOption: "SERIAL_NUMBER"
 	}).then(function(response) {
 		var range = response.result;
 		$("#contents table tbody").empty();
