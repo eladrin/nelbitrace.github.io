@@ -22,12 +22,13 @@ function renderList() {
 		} else if (mamul.e.getTime() < now.getTime()) {
 			//풀 젠
 			time = "풀젠 " + timeToString(now.getTime() - mamul.e.getTime()) + " 초과";
+			$row.addClass("full");
 		} else {
 			//초 젠과 풀젠 사이
 			time = "풀젠까지 " + timeToString(mamul.e.getTime() - now.getTime()) + " 남음";
 		}
 		
-		$row.find(".time").html(time + "<br>" + mamul.s + "<br>" + mamul.e + "<br>.");
+		$row.find(".time").html(time);
 		
 		$table.append($row);
 	}
