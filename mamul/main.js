@@ -5,13 +5,19 @@ var mamulList = {
 };
 
 function renderList() {
-	var $table = $("#contents table tbody").empty();
+	render(mamulList.A, $("#contents table"));
+	render(mamulList.S, $("#special table"));
+	render(mamulList.E, $("#other table"));
+}
+
+function render(list, $table) {
+	$table.empty();
 	
 	var now = new Date();
 	
-	for (var i = 0; i < mamulList.A.length; i++) {
-		var mamul = mamulList.A[i];
-		var $row = $("#contents .rowTemplate").clone().removeClass("rowTemplate");
+	for (var i = 0; i < list.length; i++) {
+		var mamul = list[i];
+		var $row = $table.find(".rowTemplate").clone().removeClass("rowTemplate");
 		$row.find(".zone").text(mamulZone[mamul.name]);
 		$row.find(".name").text(mamul.name);
 		
@@ -31,7 +37,7 @@ function renderList() {
 		
 		$row.find(".time").html(time);
 		
-		$table.append($row);
+		$table.find("tbody").append($row);
 	}
 	
 }
@@ -50,8 +56,18 @@ function onClickNavi() {
 	if (screen == 0) {
 		$("#special").hide();
 		$("#contents").show();
+		$("#other").hide();
+		$("#headerTitle").text("A급 마물 시간표 (카벙클)");
 	} else if (screen == 1) {
 		$("#special").show();
 		$("#contents").hide();
+		$("#other").hide();
+		$("#headerTitle").text("S급 마물 시간표 (카벙클)");
+	} else if (screen == 2) {
+		$("#special").hide();
+		$("#contents").hide();
+		$("#other").show();
+		$("#headerTitle").text("특수 돌발 시간표 (카벙클)");
+		
 	}
 }
