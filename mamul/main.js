@@ -52,7 +52,7 @@ function initMain() {
 var screen = 0;
 function onClickNavi() {
 	screen++;
-	screen %= 2;
+	screen %= 3;
 	if (screen == 0) {
 		$("#special").hide();
 		$("#contents").show();
