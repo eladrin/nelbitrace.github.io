@@ -44,6 +44,6 @@ function loadMamulListFromSheet() {
 		renderList();
 	}, function(response) {
 		//appendPre('Error: ' + response.result.error.message);
-		$("#contents table tbody").empty();
+		rendarList();
 	});
 }

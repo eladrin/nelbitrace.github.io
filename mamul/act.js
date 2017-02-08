@@ -14,12 +14,6 @@ function onOverlayDataUpdate(e) {
 	
 }
 
-var mamulList = {
-	A: [],
-	S: [],	
-	E: []
-};
-
 function importMamul(rows) {
 	var a = [], s = [], e = [];
 	var r = s;
