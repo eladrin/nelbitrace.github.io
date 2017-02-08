@@ -123,6 +123,9 @@ body {
 	width: 100%;
 	color: white;
 }
+.contents table .name {
+	padding-left: 10px;
+}
 
 
 .full {
