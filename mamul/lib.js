@@ -81,7 +81,22 @@ var engZone = {
 	"Middle La Noscea": "중부라노",
 	"Lower La Noscea": "저지라노",
 	"Eastern La Noscea": "동부라노",
+	"Western La Noscea": "서부라노",
+	"Upper La Noscea": "고지라노",
+	"Outer La Noscea": "외지라노",
 	
+	"Central Shroud": "중부삼림",
+	"East Shroud": "동부삼림",
+	"South Shroud": "남부삼림",
+	"North Shroud": "북북삼림",
+	
+	"Western Thanalan": "서부다날",
+	"Central Thanalan": "중부다날",
+	"Eastern Thanalan": "동부다날",
+	"Southern Thanaalan": "남부다날",
+	"Northern Thanaalan": "북부다날",
+	
+		
 };
 
 function convertEngToKorZone(eng) {
