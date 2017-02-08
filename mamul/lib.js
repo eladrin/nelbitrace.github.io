@@ -113,6 +113,8 @@ function convertEngToKorZone(eng) {
 }
 
 function timeToString(diff) {
+	diff /= 1000;
+	
 	var text = "초";
 	if (diff > 60) {
 		diff /= 60;
