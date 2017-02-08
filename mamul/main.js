@@ -38,7 +38,7 @@ function render(list, $table) {
 		var $row = $table.find(".rowTemplate").clone().removeClass("rowTemplate");
 		$row.find(".zone").text(mamulZone[mamul.name]);
 		var zoneClass = getZoneColorclass(mamulZone[mamul.name]);
-		if (zoneClass != null) $row.find(".zone").addClass(zoneClass);
+		
 		$row.find(".name").text(mamul.name);
 		
 		var time = "";
@@ -50,10 +50,12 @@ function render(list, $table) {
 			//풀 젠
 			time = timeToString(now.getTime() - mamul.e.getTime()) + " 경과";
 			$row.find(".time").addClass("full");
+			if (zoneClass != null) $row.find(".zone").addClass(zoneClass);
 		} else {
 			//초 젠과 풀젠 사이
 			time = timeToString(mamul.e.getTime() - now.getTime()) + " 남음";
 			$row.find(".time").addClass("mid");
+			if (zoneClass != null) $row.find(".zone").addClass(zoneClass);
 		}
 		
 		$row.find(".time").html(time);
