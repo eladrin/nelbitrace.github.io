@@ -61,8 +61,8 @@ var mamulZone = {
 };
 
 var engZone = {
-	""
-}
+	
+};
 
 function renderList() {
 	var $table = $("#contents table tbody").empty();
