@@ -9,10 +9,11 @@ function onOverlayDataUpdate(e) {
 	var name = e.detail.Encounter.title;
 	var zone = e.detail.Encounter.CurrentZoneName;
 	if (dead == false) return;
+	if (name === "Encounter") return;
 	
 	console.log(zone + " -> " + name + " : " + dead);	
 	
-	$("#headerTitle").text(zone + ", " + name);
+	$("#headerTitle").text(convertEngToKorZone(zone) + ", " + name);
 }
 
 function importMamul(rows) {
