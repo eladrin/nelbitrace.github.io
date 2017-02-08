@@ -128,5 +128,5 @@ function timeToString(diff) {
 		diff /= 24;
 		text = "일";
 	}
-	return diff + text;
+	return Math.floor(diff) + text;
 }
