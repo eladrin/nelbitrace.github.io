@@ -44,7 +44,7 @@ body {
 
 .mobList {
     position: absolute;
-    width: -webkit-calc(100%);
+    width: -webkit-calc(100% - 8rem);
     left: 3.3rem;
     height: 1.3rem;
     padding: 1rem .7rem;
@@ -99,6 +99,18 @@ body {
     width: 0%;
     left: 50%
 }
+
+.toggleBtn {
+    position: absolute;
+    width: 1.9rem;
+    height: 3.3rem;
+    padding: 0rem .7rem;
+    right: 0;
+    background: #1a1a1a;
+    color: white;
+}
+
+
 
 #login {
 	text-align: center;

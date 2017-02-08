@@ -1,8 +1,23 @@
-.scale1 html {
-	font-size: 83.125%;
-}
+.scale1 html { font-size: 56.3%; }
+.scale1 #nav-icon { top: 9px; }
+.scale1 #nav-icon span:nth-child(2) { top: 6px; }
+.scale1 #nav-icon span:nth-child(3) { top: 6px; }
+.scale1 #nav-icon span:nth-child(4) { top: 12px; }
 
+.scale1 html { font-size: 62.5%; }
+.scale1 #nav-icon { top: 9px; }
+.scale1 #nav-icon span:nth-child(2) { top: 7px; }
+.scale1 #nav-icon span:nth-child(3) { top: 7px; }
+.scale1 #nav-icon span:nth-child(4) { top: 14px; }
+
+.scale1 html { font-size: 83.125%; }
 .scale1 #nav-icon { top: 13px; }
 .scale1 #nav-icon span:nth-child(2) { top: 9px; }
 .scale1 #nav-icon span:nth-child(3) { top: 9px; }
 .scale1 #nav-icon span:nth-child(4) { top: 18px; }
+
+.scale1 html { font-size: 125%; }
+.scale1 #nav-icon { top: 18px; }
+.scale1 #nav-icon span:nth-child(2) { top: 13px; }
+.scale1 #nav-icon span:nth-child(3) { top: 13px; }
+.scale1 #nav-icon span:nth-child(4) { top: 26px; }

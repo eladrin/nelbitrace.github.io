@@ -71,6 +71,12 @@ function initMain() {
 	setInterval(loadMamulListFromSheet, 30000);
 	
 	$("#naviButton").click(onClickNavi);
+	$("#toggleBtn").click(function() {
+		scaleIndex++;
+		scaleIndex %= scales.length;
+		onScaleChange();
+	});
+	onScaleChange();
 }
 
 var screen = 0;
@@ -94,4 +100,12 @@ function onClickNavi() {
 		$("#headerTitle").text("특수 돌발 시간표 (카벙클)");
 		
 	}
+}
+
+var scales = [ "scale1", "scale2", "scale3", "scale4" ];
+var scaleIndex = 0;
+function onScaleChange() {
+	var $html = $("html");
+	for (var i = 0; i < scales.length; i++) $html.removeClass(scales[i]);
+	$html.addClass(scales[scaleIndex]);
 }
