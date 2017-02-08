@@ -28,10 +28,11 @@ function updateSigninStatus(isSignedIn) {
 	}
 }
 
+//https://docs.google.com/spreadsheets/d/10wH2_hjnP-08xuVTPFp6h7IF5Fo9H2e3IQnm7ghOsBM/edit?pref=2&pli=1#gid=234086343
 function loadMamulListFromSheet() {
 	gapi.client.sheets.spreadsheets.values.get({
-		spreadsheetId: '11CmB5V6pWfNsoI2ZAawxIj9JODSTpe9nrIVexqVgKXs',
-		range: '시간표!A2:C',
+		spreadsheetId: '10wH2_hjnP-08xuVTPFp6h7IF5Fo9H2e3IQnm7ghOsBM',
+		range: 'Test',
 	}).then(function(response) {
 		var range = response.result;
 		$("#contents table tbody").empty();
