@@ -125,11 +125,11 @@ function timeToString(diff) {
 		diff /= 60;
 		text = "시간";
 	}
-/*
+
 	if (diff > 24) {
 		diff /= 24;
 		text = "일";
 	}
-*/
+
 	return Math.floor(diff) + text;
 }
