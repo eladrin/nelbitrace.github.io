@@ -120,11 +120,12 @@ function timeToString(diff) {
 		diff /= 60;
 		text = "분";
 	} 
-/*
+
 	if (diff > 60) {
 		diff /= 60;
 		text = "시간";
 	}
+/*
 	if (diff > 24) {
 		diff /= 24;
 		text = "일";
