@@ -10,6 +10,24 @@ function renderList() {
 	render(mamulList.E, $("#other table"));
 }
 
+var zoneColor = [
+	["라노", "lano"],
+	["삼림", "sanlim"],
+	["다날", "danal"],
+	["모르도나", "mordona"],
+	["커르", "curu"],
+	["아발", "abal"],
+	["아지스", "abal"],
+	["드라", "dura"]
+];
+
+function getZoneColorclass(zone) {
+	for (var i = 0; i < zoneColor.length; i++) {
+		if (zone.indexOf(zoneColor[i][0]) != -1) return zoneColor[i][1];
+	}
+	return null;
+}
+
 function render(list, $table) {
 	$table.find("tbody").empty();
 	
@@ -19,6 +37,8 @@ function render(list, $table) {
 		var mamul = list[i];
 		var $row = $table.find(".rowTemplate").clone().removeClass("rowTemplate");
 		$row.find(".zone").text(mamulZone[mamul.name]);
+		var zoneClass = getZoneColorclass(mamulZone[mamul.name]);
+		if (zoneClass != null) $row.find(".zone").addClass(zoneClass);
 		$row.find(".name").text(mamul.name);
 		
 		var time = "";
