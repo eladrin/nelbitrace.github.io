@@ -1,22 +1,22 @@
-.scale1 html { font-size: 56.3%; }
+.scale1 html { font-size: 56.3% !important; }
 .scale1 #nav-icon { top: 9px; }
 .scale1 #nav-icon span:nth-child(2) { top: 6px; }
 .scale1 #nav-icon span:nth-child(3) { top: 6px; }
 .scale1 #nav-icon span:nth-child(4) { top: 12px; }
 
-.scale2 html { font-size: 62.5%; }
+.scale2 html { font-size: 62.5% !important; }
 .scale2 #nav-icon { top: 9px; }
 .scale2 #nav-icon span:nth-child(2) { top: 7px; }
 .scale2 #nav-icon span:nth-child(3) { top: 7px; }
 .scale2 #nav-icon span:nth-child(4) { top: 14px; }
 
-.scale3 html { font-size: 83.125%; }
+.scale3 html { font-size: 83.125% !important; }
 .scale3 #nav-icon { top: 13px; }
 .scale3 #nav-icon span:nth-child(2) { top: 9px; }
 .scale3 #nav-icon span:nth-child(3) { top: 9px; }
 .scale3 #nav-icon span:nth-child(4) { top: 18px; }
 
-.scale4 html { font-size: 125%; }
+.scale4 html { font-size: 125% !important; }
 .scale4 #nav-icon { top: 18px; }
 .scale4 #nav-icon span:nth-child(2) { top: 13px; }
 .scale4 #nav-icon span:nth-child(3) { top: 13px; }
