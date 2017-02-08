@@ -24,7 +24,7 @@ function importMamul(rows) {
 	var a = [], s = [], e = [];
 	var r = s;
 	for (i = 0; i < rows.length; i++) {
-		var row = range.values[i];
+		var row = rows[i];
 		//appendPre(row[0] + ', ' + row[1] + ", " + row[2]);
 		//$("#contents table tbody").append("<tr><td>" + row[0] + "</td><td>test</td></tr>");
 		
