@@ -22,6 +22,7 @@ var zoneColor = [
 ];
 
 function getZoneColorclass(zone) {
+	if (zone == null) return null;
 	for (var i = 0; i < zoneColor.length; i++) {
 		if (zone.indexOf(zoneColor[i][0]) != -1) return zoneColor[i][1];
 	}
