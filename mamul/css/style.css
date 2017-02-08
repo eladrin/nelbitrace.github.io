@@ -60,16 +60,6 @@ body {
     vertical-align: middle
 }
 
-.toggleBtn {
-    position: absolute;
-    width: 1.9rem;
-    height: 3.3rem;
-    padding: 0rem .7rem;
-    right: 0;
-    background: #1a1a1a
-}
-
-
 #nav-icon {
     width: 1.9rem;
     position: absolute;
@@ -109,18 +99,4 @@ body {
     top: 14px;
     width: 0%;
     left: 50%
-}
-
-.toggle {
-    display: inline-block;
-    position: absolute;
-    z-index: 1
-}
-
-.toggle__input {
-    display: block;
-    opacity: 0;
-    width: 0;
-    position: absolute;
-    z-index: 0
 }
