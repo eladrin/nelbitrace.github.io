@@ -4,12 +4,12 @@ window.addEventListener("message", function(e) {
 });
 
 function onOverlayDataUpdate(e) {
-	console.log(zone + " -> " + name + " : " + dead);
-	
 	var dead = (e.detail.Encounter.kills > 0);
-
 	var name = e.detail.Encounter.title;
 	var zone = e.detail.Encounter.CurrentZoneName;
+	
+	console.log(zone + " -> " + name + " : " + dead);
+	
 	if (name == null) return;
 	//if (dead == false) return;
 	//if (name === "Encounter") return;
