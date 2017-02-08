@@ -39,18 +39,9 @@ function loadMamulListFromSheet() {
 		var range = response.result;
 		$("#contents table tbody").empty();
 		if (range.values.length > 0) {
-/*
-			for (i = 0; i < range.values.length; i++) {
-				var row = range.values[i];
-				//appendPre(row[0] + ', ' + row[1] + ", " + row[2]);
-				$("#contents table tbody").append("<tr><td>" + row[0] + "</td><td>test</td></tr>");
-			}
-*/
 			importMamul(range.values);
-			renderList();
-		} else {
-			//appendPre('No data found.');
 		}
+		renderList();
 	}, function(response) {
 		//appendPre('Error: ' + response.result.error.message);
 		$("#contents table tbody").empty();

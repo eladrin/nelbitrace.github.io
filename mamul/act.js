@@ -30,19 +30,19 @@ function importMamul(rows) {
 		
 		a.push({
 			name: row[0],
-			s: row[1],
-			e: row[2]
+			s: convert2jsDate(row[1]),
+			e: convert2jsDate(row[2])
 		});
 		
-		if (row[3] === "") {
+		if (row[3] === "" || row[3] == null) {
 			r = e;
 			continue;
 		} 
 		
 		r.push({
 			name: row[3],
-			s: row[4],
-			e: row[5]
+			s: convert2jsDate(row[4]),
+			e: convert2jsDate(row[5])
 		});
 	}
 	mamulList.A = a;
