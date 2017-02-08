@@ -10,6 +10,7 @@ function onOverlayDataUpdate(e) {
 
 	var name = e.detail.Encounter.title;
 	var zone = e.detail.Encounter.CurrentZoneName;
+	if (name == null) return;
 	//if (dead == false) return;
 	//if (name === "Encounter") return;
 		

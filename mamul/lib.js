@@ -96,7 +96,16 @@ var engZone = {
 	"Southern Thanaalan": "남부다날",
 	"Northern Thanaalan": "북부다날",
 	
-		
+	"Coerthas Central Highlands": "커르중앙",
+	
+	"The Dravanian Forelands": "고지드라",
+	"The Dravanian Hinterlands": "저지드라",
+	
+	"Coerthas Western Highlands": "커르서부",
+	"Abalathia's Spine: The Sea Of Clouds": "아발구름",
+	"Azys Lla": "아지스라",
+	"The Churning Mists": "드라구름",
+	"Mor Dhona": "모르도나"
 };
 
 function convertEngToKorZone(eng) {
