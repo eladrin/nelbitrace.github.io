@@ -25,6 +25,7 @@ function render(list, $table) {
 		if (mamul.s.getTime() > now.getTime()) {
 			//노 젠
 			time = timeToString(mamul.s.getTime() - now.getTime()) + " 남음";
+			$row.addClass("nojen");
 		} else if (mamul.e.getTime() < now.getTime()) {
 			//풀 젠
 			time = timeToString(now.getTime() - mamul.e.getTime()) + " 경과";
