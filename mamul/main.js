@@ -297,7 +297,7 @@ function render(list, $table) {
 			$row.find(".time").addClass("mid");
 			$row.find(".name").addClass("glow");
 
-			var div = (mamul.e.getTime() - now.getTime()) / (mamul.e.getTime() - mamul.s.getTime());
+			var div = 1 - ((mamul.e.getTime() - now.getTime()) / (mamul.e.getTime() - mamul.s.getTime()));
 			div = div >= 0.05 ? div : 0.05; //최소 5%
 			var blend = blend_colors('#f1c40f', '#2ecc71', div);
 
