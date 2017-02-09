@@ -3,12 +3,14 @@
 .scale1 #headerTitle { width: -webkit-calc(100% - 22px - 22px); font-size: 12px; }
 .scale1 #toggleBtn { width: 22px; }
 .scale1 .contents { top: 22px; }
+.scale1 .contents table { font-size: 11px; }
 
 .scale2 #header { height: 33px; }
 .scale2 #naviButton { width: 33px; }
 .scale2 #headerTitle { width: -webkit-calc(100% - 33px - 33px); font-size: 15px; }
 .scale2 #toggleBtn { width: 33px; }
 .scale2 .contents { top: 33px; }
+.scale2 .contents table { font-size: 14px; }
 
 
 .scale3 #header { height: 44px; }
@@ -16,10 +18,11 @@
 .scale3 #headerTitle { width: -webkit-calc(100% - 44px - 44px); font-size: 22px; }
 .scale3 #toggleBtn { width: 44px; }
 .scale3 .contents { top: 44px; }
-
+.scale3 .contents table { font-size: 20px; }
 
 .scale4 #header { height: 66px; }
 .scale4 #naviButton { width: 66px; }
 .scale4 #headerTitle { width: -webkit-calc(100% - 66px - 66px); font-size: 33px; }
 .scale4 #toggleBtn { width: 66px; }
 .scale4 .contents { top: 66px; }
+.scale4 .contents table { font-size: 30px; }
