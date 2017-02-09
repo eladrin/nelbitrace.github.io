@@ -118,8 +118,17 @@ body {
 }
 
 .contents table .time {
-    text-align: center;
-    white-space: nowrap;
+	position: relative;
+	text-align: center;
+	white-space: nowrap;
+}
+
+.contents table .timebar {
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: -1;
+	height: 100%;
 }
 
 .glow { text-shadow: 0 0 3px #ffffff; font-weight: bold; }
