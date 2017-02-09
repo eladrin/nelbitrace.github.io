@@ -43,7 +43,12 @@ function importMamul(rows) {
 			e: convert2jsDate(row[5])
 		});
 	}
+	
+	var es = [];
+	for (var i = 0; i < e.length; i++) es.push(e[i]);
+	for (var i = 0; i < s.length; i++) es.push(s[i]);
 	mamulList.A = a;
 	mamulList.S = s;
 	mamulList.E = e;
+	mamulList.ES = es;
 }

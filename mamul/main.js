@@ -1,13 +1,14 @@
 var mamulList = {
 	A: [],
 	S: [],	
-	E: []
+	E: [],
+	ES: []
 };
 
 function renderList() {
 	render(mamulList.A, $("#contents table"));
-	render(mamulList.S, $("#special table"));
-	render(mamulList.E, $("#other table"));
+	render(mamulList.ES, $("#special table"));
+	//render(mamulList.E, $("#other table"));
 }
 
 var zoneColor = [
@@ -75,10 +76,12 @@ function initMain() {
 	$("#naviButton").click(onClickNavi);
 }
 
-var screen = 0;
+var screen = localStorage.getItem("screen");
+if (screen == null) screen = 0;
+
 function onClickNavi() {
 	screen++;
-	screen %= 3;
+	screen %= 2;
 	if (screen == 0) {
 		$("#special").hide();
 		$("#contents").show();
@@ -88,14 +91,14 @@ function onClickNavi() {
 		$("#special").show();
 		$("#contents").hide();
 		$("#other").hide();
-		$("#headerTitle span").text("S급 마물 시간표 (카벙클)");
-	} else if (screen == 2) {
+		$("#headerTitle span").text("S급/특수 돌발 시간표 (카벙클)");
+	}/* else if (screen == 2) {
 		$("#special").hide();
 		$("#contents").hide();
 		$("#other").show();
 		$("#headerTitle span").text("특수 돌발 시간표 (카벙클)");
-		
-	}
+	}*/
+	localStorage.setItem("screen", screen);
 }
 
 var scales = [ "scale1", "scale2", "scale3", "scale4" ];
