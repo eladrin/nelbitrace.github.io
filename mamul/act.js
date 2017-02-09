@@ -1,18 +1,22 @@
 function onOverlayDataUpdate(e) {
-	var dead = (e.detail.Encounter.kills > 0);
-	var name = e.detail.Encounter.title;
-	var zone = e.detail.Encounter.CurrentZoneName;
-	
-	//console.log(zone + " -> " + name + " : " + dead);
-	
-	if (name == null || name === "Encounter") return;
-	
-	if (isMamul(name, zone) == false) return;
-	if (checkIfReported(name)) return;
-	
-	var info = combatInfo(e.detail);
-	
-	doReport(name, info, dead);
+	try {
+		var dead = (e.detail.Encounter.kills > 0);
+		var name = e.detail.Encounter.title;
+		var zone = e.detail.Encounter.CurrentZoneName;
+		
+		//console.log(zone + " -> " + name + " : " + dead);
+		
+		if (name == null || name === "Encounter") return;
+		
+		if (isMamul(name, zone) == false) return;
+		if (checkIfReported(name)) return;
+		
+		var info = combatInfo(e.detail);
+		
+		doReport(name, info, dead);
+	} catch (e) {
+		
+	}
 }
 
 function importMamul(rows) {
