@@ -10,15 +10,9 @@ function onOverlayDataUpdate(e) {
 	
 	//console.log(zone + " -> " + name + " : " + dead);
 	
-	if (name == null) return;
-	//if (dead == false) return;
-		
+	if (name == null || name === "Encounter") return;
 	
-	//$("#headerTitle").text(convertEngToKorZone(zone) + ", " + name);
-	
-	if (name === "Encounter") return;
-	
-	
+	console.log(JSON.stringify(e));
 	
 }
 

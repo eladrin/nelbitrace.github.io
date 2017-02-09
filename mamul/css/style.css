@@ -51,9 +51,10 @@ body {
 	float: left;
 	height: 100%;
 	color: #fff;
-    text-shadow: 0 0 .3rem #0f0f0f;
+    text-shadow: 0 0 5px #ffffff;
     font-family: 'Nanum gothic', serif;
-    background: rgba(133, 133, 133, 1);
+    background: #1a1a1a;
+    font-weight: bold;
 }
 
 #headerTitle > span {
@@ -102,7 +103,7 @@ body {
 	padding-left: 10px;
 }
 
-.glow { text-shadow: 0 0 0.3rem #ffffff; }
+.glow { text-shadow: 0 0 5px #ffffff; font-weight: bold; }
 .full { color: red; }
 .mid { color: lime; }
 .nojen { color: gray; }
