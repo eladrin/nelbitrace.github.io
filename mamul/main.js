@@ -92,21 +92,17 @@ function screenChange() {
 		$("#contents").show();
 		$("#other").hide();
 		$("#headerTitle span").text("A급 마물 시간표 (카벙클)");
-		$("#headerTitle").show();
-		$("#toggleBtn").show();
 	} else if (screen == 1) {
 		$("#special").show();
 		$("#contents").hide();
 		$("#other").hide();
 		$("#headerTitle span").text("S급/특수 돌발 시간표 (카벙클)");
-		$("#headerTitle").show();
-		$("#toggleBtn").show();
 	} else if (screen == 2) {
 		$("#special").hide();
 		$("#contents").hide();
 		$("#other").hide();
-		$("#headerTitle").hide();
-		$("#toggleBtn").hide();
+		$("#other").hide();
+		$("#headerTitle span").text("카벙클 마물 시간표");
 	}
 	localStorage.setItem("screen", screen);
 }
