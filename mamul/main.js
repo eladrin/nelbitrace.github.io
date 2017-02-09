@@ -277,7 +277,7 @@ function render(list, $table) {
 			//6시간 미만 일때 바 생성
 			if (mamul.s.getTime() - now.getTime() < 21600000) {
 				var div = 1 - ((mamul.s.getTime() - now.getTime()) / 21600000);
-				barWidth = Math.round(div * 100);
+			//	barWidth = Math.round(div * 100);
 			}
 
 			barColor = "rgba(128, 128, 128, 0.5)";
@@ -288,7 +288,7 @@ function render(list, $table) {
 			$row.find(".name").addClass("glow");
 
 			barWidth = 100;
-			barColor = "rgba(46, 204, 113, 0.5)";
+			barColor = "rgba(231, 76, 60, 0.5)";
 
 			if (zoneClass != null) $row.find(".zone").addClass(zoneClass);
 		} else {
