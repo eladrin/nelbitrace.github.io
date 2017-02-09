@@ -99,11 +99,14 @@ function onClickNavi() {
 }
 
 var scales = [ "scale1", "scale2", "scale3", "scale4" ];
-var scaleIndex = 0;
+var scaleIndex = localStorage.getItem("scaleIndex");
+if (scaleIndex == null) scaleIndex = 0;
+
 function onScaleChange() {
 	var $html = $("html");
 	for (var i = 0; i < scales.length; i++) $html.removeClass(scales[i]);
 	$html.addClass(scales[scaleIndex]);
+	localStorage.setItem("scaleIndex", scaleIndex);
 }
 
 $(function() {
