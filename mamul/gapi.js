@@ -60,3 +60,17 @@ function loadMamulListFromSheet() {
 		rendarList();
 	});
 }
+
+function appendRowSheet(values, callback) {
+	gapi.client.sheets.spreadsheets.values.append({
+    	spreadsheetId: '11CmB5V6pWfNsoI2ZAawxIj9JODSTpe9nrIVexqVgKXs',
+		range: '신고',
+		valueInputOption: "USER_ENTERED", 
+		resource: { 
+			"majorDimension": "ROWS", 
+			values: [ values ] 
+		}
+	}).then(function(res) { 
+		callback();
+	});
+}

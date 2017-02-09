@@ -85,34 +85,34 @@ var mamulZone = {
 };
 
 var engZone = {
-	"Middle La Noscea": "중부라노",
-	"Lower La Noscea": "저지라노",
-	"Eastern La Noscea": "동부라노",
-	"Western La Noscea": "서부라노",
-	"Upper La Noscea": "고지라노",
-	"Outer La Noscea": "외지라노",
+	"Middle La Noscea": "중부라노", 	"중부 라노시아": "중부라노",
+	"Lower La Noscea": "저지라노", 	"저지 라노시아": "저지라노",
+	"Eastern La Noscea": "동부라노",	"동부 라노시아": "동부라노",
+	"Western La Noscea": "서부라노",	"서부 라노시아": "서부라노",
+	"Upper La Noscea": "고지라노",		"고지 라노시아": "고지라노",
+	"Outer La Noscea": "외지라노",		"외지 라노시아": "외지라노",
 	
-	"Central Shroud": "중부삼림",
-	"East Shroud": "동부삼림",
-	"South Shroud": "남부삼림",
-	"North Shroud": "북북삼림",
+	"Central Shroud": "중부삼림",		"검은장막 숲 중부삼림": "중부삼림",
+	"East Shroud": "동부삼림",			"검은장막 숲 동부삼림": "동부삼림",
+	"South Shroud": "남부삼림",		"검은장막 숲 남부삼림": "남부삼림",
+	"North Shroud": "북북삼림",		"검은장막 숲 북부삼림": "북부삼림",
 	
-	"Western Thanalan": "서부다날",
-	"Central Thanalan": "중부다날",
-	"Eastern Thanalan": "동부다날",
-	"Southern Thanalan": "남부다날",
-	"Northern Thanalan": "북부다날",
+	"Western Thanalan": "서부다날",	"서부 다날란": "서부다날",
+	"Central Thanalan": "중부다날",	"중부 다날란": "중부다날",
+	"Eastern Thanalan": "동부다날",	"동부 다날란": "동부다날",
+	"Southern Thanalan": "남부다날",	"남부 다날란": "남부다날",
+	"Northern Thanalan": "북부다날",	"북부 다날란": "북부다날",
 	
-	"Coerthas Central Highlands": "커르중앙",
+	"Coerthas Central Highlands": "커르중앙", 	"커르다스 중앙고지": "커르중앙",
 	
-	"The Dravanian Forelands": "고지드라",
-	"The Dravanian Hinterlands": "저지드라",
+	"The Dravanian Forelands": "고지드라",		"고지 드라바니아": "고지드라",
+	"The Dravanian Hinterlands": "저지드라",	"저지 드라바니아": "저지드라",
 	
-	"Coerthas Western Highlands": "커르서부",
-	"Abalathia's Spine: The Sea Of Clouds": "아발구름",
-	"Azys Lla": "아지스라",
-	"The Churning Mists": "드라구름",
-	"Mor Dhona": "모르도나"
+	"Coerthas Western Highlands": "커르서부",	"커르다스 서부고지": "커르서부",
+	"Abalathia's Spine: The Sea Of Clouds": "아발구름", "아발라시아 구름바다": "아발구름",
+	"Azys Lla": "아지스라", "아지스 라": "아지스라",
+	"The Churning Mists": "드라구름", 	"드라바니아 구름바다": "드라구름",
+	"Mor Dhona": "모르도나", "모르도나": "모르도나"
 };
 
 function convertEngToKorZone(eng) {

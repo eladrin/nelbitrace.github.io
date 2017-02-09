@@ -74,6 +74,7 @@ function initMain() {
 	setInterval(loadMamulListFromSheet, 30000);
 	
 	$("#naviButton").click(onClickNavi);
+	screenChange();
 }
 
 var screen = localStorage.getItem("screen");
@@ -82,6 +83,10 @@ if (screen == null) screen = 0;
 function onClickNavi() {
 	screen++;
 	screen %= 2;
+	screenChange();
+}
+
+function screenChange() {
 	if (screen == 0) {
 		$("#special").hide();
 		$("#contents").show();

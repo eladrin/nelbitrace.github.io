@@ -12,10 +12,12 @@ function onOverlayDataUpdate(e) {
 	
 	if (name == null || name === "Encounter") return;
 	
-	console.log(JSON.stringify(e));
+	if (isMamul(name, zone) == false) return;
+	if (checkIfReported(name)) return;
 	
-	console.log(JSON.stringify(e.detail));
+	var info = combatInfo(e.detail);
 	
+	doReport(name, info, dead);
 }
 
 function importMamul(rows) {
@@ -51,4 +53,47 @@ function importMamul(rows) {
 	mamulList.S = s;
 	mamulList.E = e;
 	mamulList.ES = es;
+}
+
+function isMamul(name, zone) {
+	zone = convertEngToKorZone(zone);
+	return (mamulZone[name] === zone); 
+}
+
+function combatInfo(data) {
+	var info = {
+		duration: data.Encounter['DURATION'],
+		demage: data.Encounter['denage'],
+		encdps: data.Encounter['encdps'],
+		combat: {}
+	};
+	for (var k in data.Combatant) info.combat[k] = data.Combatant[k].Job;
+	return info;
+}
+
+function checkIfReported(name) {
+	var date = localStorage.getItem("report." + name);
+	if (date == null) return false;
+	date = new Date(date);
+	return (new Date().getTime() - date.getTime()) <= (1000 * 60 + 60);
+}
+
+function markReported(name) {
+	localStorage.setItem("report." + name, (new Date().getTime()));
+}
+
+var rTimeout = 0;
+function doReport(name, info, dead) {
+	var run = function() {
+		appendRowSheet([ name, JSON.stringify(info), new Date() ], function() {
+			markReported(name);
+		});	
+	};
+	if (rTimeout != 0) {
+		clearTimeout(rTimeout);
+		rTimeout = 0;
+	}
+	if (dead) return run();
+	
+	setTimeout(run, 10000);
 }
