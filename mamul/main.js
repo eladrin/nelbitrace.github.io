@@ -71,12 +71,6 @@ function initMain() {
 	setInterval(loadMamulListFromSheet, 30000);
 	
 	$("#naviButton").click(onClickNavi);
-	$("#toggleBtn").click(function() {
-		scaleIndex++;
-		scaleIndex %= scales.length;
-		onScaleChange();
-	});
-	onScaleChange();
 }
 
 var screen = 0;
@@ -87,17 +81,17 @@ function onClickNavi() {
 		$("#special").hide();
 		$("#contents").show();
 		$("#other").hide();
-		$("#headerTitle").text("A급 마물 시간표 (카벙클)");
+		$("#headerTitle span").text("A급 마물 시간표 (카벙클)");
 	} else if (screen == 1) {
 		$("#special").show();
 		$("#contents").hide();
 		$("#other").hide();
-		$("#headerTitle").text("S급 마물 시간표 (카벙클)");
+		$("#headerTitle span").text("S급 마물 시간표 (카벙클)");
 	} else if (screen == 2) {
 		$("#special").hide();
 		$("#contents").hide();
 		$("#other").show();
-		$("#headerTitle").text("특수 돌발 시간표 (카벙클)");
+		$("#headerTitle span").text("특수 돌발 시간표 (카벙클)");
 		
 	}
 }
@@ -109,3 +103,13 @@ function onScaleChange() {
 	for (var i = 0; i < scales.length; i++) $html.removeClass(scales[i]);
 	$html.addClass(scales[scaleIndex]);
 }
+
+$(function() {
+	
+	$("#toggleBtn").click(function() {
+		scaleIndex++;
+		scaleIndex %= scales.length;
+		onScaleChange();
+	});
+	onScaleChange();
+})
