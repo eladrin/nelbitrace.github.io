@@ -14,6 +14,8 @@ function onOverlayDataUpdate(e) {
 	
 	console.log(JSON.stringify(e));
 	
+	console.log(JSON.stringify(e.detail));
+	
 }
 
 function importMamul(rows) {
