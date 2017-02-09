@@ -82,7 +82,7 @@ if (screen == null) screen = 0;
 
 function onClickNavi() {
 	screen++;
-	screen %= 2;
+	screen %= 3;
 	screenChange();
 }
 
@@ -92,17 +92,22 @@ function screenChange() {
 		$("#contents").show();
 		$("#other").hide();
 		$("#headerTitle span").text("A급 마물 시간표 (카벙클)");
+		$("#headerTitle").show();
+		$("#toggleBtn").show();
 	} else if (screen == 1) {
 		$("#special").show();
 		$("#contents").hide();
 		$("#other").hide();
 		$("#headerTitle span").text("S급/특수 돌발 시간표 (카벙클)");
-	}/* else if (screen == 2) {
+		$("#headerTitle").show();
+		$("#toggleBtn").show();
+	} else if (screen == 2) {
 		$("#special").hide();
 		$("#contents").hide();
-		$("#other").show();
-		$("#headerTitle span").text("특수 돌발 시간표 (카벙클)");
-	}*/
+		$("#other").hide();
+		$("#headerTitle").hide();
+		$("#toggleBtn").hide();
+	}
 	localStorage.setItem("screen", screen);
 }
 
