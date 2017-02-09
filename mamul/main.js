@@ -51,11 +51,13 @@ function render(list, $table) {
 			//풀 젠
 			time = timeToString(now.getTime() - mamul.e.getTime()) + " 경과";
 			$row.find(".time").addClass("full");
+			$row.find(".name").addClass("glow");
 			if (zoneClass != null) $row.find(".zone").addClass(zoneClass);
 		} else {
 			//초 젠과 풀젠 사이
 			time = timeToString(mamul.e.getTime() - now.getTime()) + " 남음";
 			$row.find(".time").addClass("mid");
+			$row.find(".name").addClass("glow");
 			if (zoneClass != null) $row.find(".zone").addClass(zoneClass);
 		}
 		
