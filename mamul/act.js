@@ -85,7 +85,7 @@ function markReported(name) {
 var rTimeout = 0;
 function doReport(name, info, dead) {
 	var run = function() {
-		appendRowSheet([ name, JSON.stringify(info), new Date() ], function() {
+		appendRowSheet([ name, JSON.stringify(info), new Date(), new Date().getTime() ], function() {
 			markReported(name);
 		});	
 	};

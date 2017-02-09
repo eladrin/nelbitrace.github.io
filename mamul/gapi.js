@@ -45,7 +45,7 @@ function doLoginGoogle() {
 function loadMamulListFromSheet() {
 	gapi.client.sheets.spreadsheets.values.get({
 		spreadsheetId: '10wH2_hjnP-08xuVTPFp6h7IF5Fo9H2e3IQnm7ghOsBM',
-		range: 'Test',
+		range: 'Act',
 		dateTimeRenderOption: "SERIAL_NUMBER",
 		valueRenderOption: "UNFORMATTED_VALUE"
 	}).then(function(response) {
@@ -63,8 +63,8 @@ function loadMamulListFromSheet() {
 
 function appendRowSheet(values, callback) {
 	gapi.client.sheets.spreadsheets.values.append({
-    	spreadsheetId: '11CmB5V6pWfNsoI2ZAawxIj9JODSTpe9nrIVexqVgKXs',
-		range: '신고',
+    	spreadsheetId: '1uxXDxWAnFx1_YzHhTtUXEBwT2Rl_jLyaDpOWr_MV8MA',
+		range: getParameterByName("admin") == null ? "일반용" : "관리용",
 		valueInputOption: "USER_ENTERED", 
 		resource: { 
 			"majorDimension": "ROWS", 
