@@ -96,4 +96,14 @@
 	onload="this.onload=function(){};handleClientLoad()"
 		onreadystatechange="if (this.readyState === 'complete') this.onload()">
 </script>
+<script>
+	document.addEventListener("onOverlayDataUpdate", onOverlayDataUpdate);
+	window.addEventListener("message", function(e) {
+		try {
+			if (e.data.type === 'onOverlayDataUpdate') onOverlayDataUpdate(e.data);	
+		} catch (e) {
+			
+		}	
+	});
+</script>
 </html>

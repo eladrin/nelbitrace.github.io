@@ -1,8 +1,3 @@
-document.addEventListener("onOverlayDataUpdate", onOverlayDataUpdate);
-window.addEventListener("message", function(e) {
-	if (e.data.type === 'onOverlayDataUpdate') onOverlayDataUpdate(e.data);
-});
-
 function onOverlayDataUpdate(e) {
 	var dead = (e.detail.Encounter.kills > 0);
 	var name = e.detail.Encounter.title;
