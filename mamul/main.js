@@ -267,35 +267,58 @@ function render(list, $table) {
 		$row.find(".name").text(mamul.name);
 		
 		var time = "";
+		var barWidth = 0;
+		var barColor = "";
 		if (mamul.s.getTime() > now.getTime()) {
 			//노 젠
 			time = timeToString(mamul.s.getTime() - now.getTime()) + " 남음";
 			$row.addClass("nojen");
+
+			//6시간 미만 일때 바 생성
+			if (mamul.s.getTime() - now.getTime() < 21600000) {
+				var div = (mamul.s.getTime() - now.getTime()) / 21600000;
+				barWidth = Math.round(div * 100);
+			}
+
+			barColor = "rgba(128, 128, 128, 0.5)";
 		} else if (mamul.e.getTime() < now.getTime()) {
 			//풀 젠
 			time = timeToString(now.getTime() - mamul.e.getTime()) + " 경과";
 			$row.find(".time").addClass("full");
 			$row.find(".name").addClass("glow");
+
+			barWidth = 100;
+			barColor = "rgba(46, 204, 113, 0.5)";
+
 			if (zoneClass != null) $row.find(".zone").addClass(zoneClass);
 		} else {
 			//초 젠과 풀젠 사이
 			time = timeToString(mamul.e.getTime() - now.getTime()) + " 남음";
 			$row.find(".time").addClass("mid");
 			$row.find(".name").addClass("glow");
+
+			var div = (mamul.e.getTime() - now.getTime()) / (mamul.e.getTime() - mamul.s.getTime());
+			div = div >= 0.05 ? div : 0.05; //최소 5%
+			var blend = blend_colors('#f1c40f', '#2ecc71', div);
+
+			barWidth = Math.round(div * 100);
+			barColor = "rgba(" + blend.join(', ') + ", 0.5)";
+
 			if (zoneClass != null) $row.find(".zone").addClass(zoneClass);
 		}
-		
-		$row.find(".time").html(time);
-		
+
+		$row.find(".time .text").html(time);
+		$row.find(".time .timebar").css({"width": barWidth + "%", "background-color": barColor});
+
 		$table.find("tbody").append($row);
 	}
-	
+
 }
 
 function initMain() {
 	loadMamulListFromSheet();
 	setInterval(loadMamulListFromSheet, 30000);
-	
+
 	$("#naviButton").click(onClickNavi);
 	screenChange();
 }

@@ -42,7 +42,10 @@
 					<tr class="rowTemplate">
 						<td class="zone" align="center"></td>
 						<td class="name"></td>
-						<td class="time"></td>
+						<td class="time">
+							<span class="text"></span>
+							<div class="timebar"></div>
+						</td>
 					</tr>
 				</tfoot>
 			</table>
@@ -62,12 +65,15 @@
 					<tr class="rowTemplate">
 						<td class="zone" align="center"></td>
 						<td class="name"></td>
-						<td class="time"></td>
+						<td class="time">
+							<span class="text"></span>
+							<div class="timebar"></div>
+						</td>
 					</tr>
 				</tfoot>
 			</table>
 		</div>
-		
+
 		<div class="contents" id="other" style="display: none">
 			<table>
 				<thead>
@@ -81,13 +87,17 @@
 				<tfoot style="display: none">
 					<tr class="rowTemplate">
 						<td class="name"></td>
-						<td class="time"></td>
+						<td class="time">
+							<span class="text"></span>
+							<div class="timebar"></div>
+						</td>
 					</tr>
 				</tfoot>
 			</table>
 		</div>
 	</div>
 </body>
+<script src="blend.js" type="text/javascript"></script>
 <script src="main.js" type="text/javascript"></script>
 <script async defer src="https://apis.google.com/js/api.js"
 	onload="this.onload=function(){};handleClientLoad()"

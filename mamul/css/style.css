@@ -96,17 +96,36 @@ body {
 }
 
 .contents table {
+	border-collapse: collapse;
+    border-spacing: 0;
 	width: 100%;
+	line-height: 1.6;
 	color: white;
 }
-.contents table .name {
-	padding-left: 10px;
+
+.contents table td {
+	border-bottom: 1px solid rgba(128, 128, 128, 0.1);
 }
 
-.glow { text-shadow: 0 0 5px #ffffff; font-weight: bold; }
-.full { color: red; }
-.mid { color: lime; }
-.nojen { color: gray; }
+.contents table .zone {
+	text-align: center;
+    white-space: nowrap;
+}
+
+.contents table .name {
+	padding-left: 10px;
+	white-space: nowrap;
+}
+
+.contents table .time {
+    text-align: center;
+    white-space: nowrap;
+}
+
+.glow { text-shadow: 0 0 3px #ffffff; font-weight: bold; }
+.full { /*color: red;*/ }
+.mid { /*color: lime;*/ }
+.nojen { color: #adadad; }
 
 .lano { color: #009eff; }
 .sanlim { color: #14ffaa; }
