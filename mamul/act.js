@@ -14,7 +14,7 @@ function onOverlayDataUpdate(e) {
 		var info = combatInfo(e.detail);
 		
 		doReport(name, info, dead);
-	} catch (e) {
+	} catch (ex) {
 		
 	}
 }

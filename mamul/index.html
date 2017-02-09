@@ -101,7 +101,7 @@
 	window.addEventListener("message", function(e) {
 		try {
 			if (e.data.type === 'onOverlayDataUpdate') onOverlayDataUpdate(e.data);	
-		} catch (e) {
+		} catch (ex) {
 			
 		}	
 	});
