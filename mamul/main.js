@@ -276,7 +276,7 @@ function render(list, $table) {
 
 			//6시간 미만 일때 바 생성
 			if (mamul.s.getTime() - now.getTime() < 21600000) {
-				var div = (mamul.s.getTime() - now.getTime()) / 21600000;
+				var div = 1 - ((mamul.s.getTime() - now.getTime()) / 21600000);
 				barWidth = Math.round(div * 100);
 			}
 
